@@ -2,11 +2,19 @@
 	/* border:solid 1px red; */
 }
 
+strong{
+    text-align: center;
+}
+
 #themeImg img {
     width: 60%;
 }
 
 #headerr div {
+    display:inline-block;
+    text-align: center;
+    width:20%;
+    font-size: 1.5em;
 }
 
 #headerl img {
@@ -80,4 +88,12 @@ div#headerl {
 header.row {
     display: flex;
     border-bottom: solid 2px #1BFF00;
+}
+
+figcaption{
+    text-align: center;
+}
+
+figure p{
+    text-align:center;
 }
