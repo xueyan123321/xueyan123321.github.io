@@ -19,9 +19,22 @@ var bio={
 	},
 	"bioPic":"images/fry.jpg",
 	"welcomeMessage":"welcome",
-	"skills":["dancing","English","programmer"]
+	"skills":["English","programming"]
 }
 
+var cBio={
+	"name":"薛琰",
+	"role":"网站开发",
+	"contacts":{
+		"mobile":"15355458156",
+		"email":"1152991535@qq.com",
+		"github":"xueyan123321",
+		"location":"杭州",
+	},
+	"bioPic":"images/fry.jpg",
+	"welcomeMessage":"欢迎",
+	"skills":["英语","编程"]
+}
 // var work={};
 // work.position="students";
 // work.employer="jobs";
@@ -164,7 +177,7 @@ function inName(){
 		$("#header").prepend(interNa);
 	}
 
-$("#main").append(internationalizeButton);
+$("#main").append(chineseButton);
 $("button").click(function(){
 	inName();
 })
