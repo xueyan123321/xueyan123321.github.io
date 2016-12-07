@@ -136,6 +136,25 @@ bio.displayBio=function(){
 
 bio.displayBio();
 
+//自我描述变成中文
+
+cBio.changeToChinese=function(){
+	$('#name').text(this.name);
+	$('#header span:first').text(this.role);
+	console.log(this.contacts.location);
+	$('#header li:eq(0) .orange-text').text('联系方式');
+	$('#header li:eq(0) .white-text').text('信息');
+	$('#header li:eq(1) .orange-text').text('移动电话');
+	$('#header li:eq(3) .orange-text').text('位置');
+	$('#skills-h3').text('技能浏览');
+	$('#header li:eq(3) .white-text').text(this.contacts.location);
+	$('.welcome-message').text(this.welcomeMessage);
+	$('#skills li:eq(0) span').text(this.skills[0]);
+	$('#skills li:eq(1) span').text(this.skills[1]);
+}
+
+// cBio.changeToChinese();
+
 work.displayWork=function(){
 	work.jobs.forEach(function(element){
 	$("#workExperience").append(HTMLworkStart);
@@ -178,8 +197,10 @@ function inName(){
 	}
 
 $("#main").append(chineseButton);
-$("button").click(function(){
-	inName();
+
+$("#button").click(function(){
+      cBio.changeToChinese();
+      $("#button").text("变成英文");
 })
 
 displayMap=function(){
