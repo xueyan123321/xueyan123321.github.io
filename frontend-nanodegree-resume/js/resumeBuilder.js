@@ -20,6 +20,12 @@ var bio={
 	"bioPic":"images/fry.jpg",
 	"welcomeMessage":"welcome",
 	"skills":["English","programming"]
+//标识符
+    "contactsway":"contact";
+    "info":"info";
+    "mobileMark":"mobile";
+    "locationMark":"Hangzhou";
+    "skillsGlance":"Skills at a Glance";
 }
 
 var cBio={
@@ -46,6 +52,23 @@ var cBio={
 // $("#main").append(work["position"]);
 
 var work={
+	"jobs":[{
+	"employer":"zhejiang University of technology",
+	"title":"graduate",
+	"location":"HangZhou",
+	"date":2016,
+	"description":"I have a master degree."
+
+},{
+	"employer":"siyuejiaoyu",
+	"title":"English Teacher",
+	"location":"Hangzhou",
+	"date":2016,
+	"description":"I am a on-line Teacher."
+}]
+}
+
+var cWork={
 	"jobs":[{
 	"employer":"zhejiang University of technology",
 	"title":"graduate",
@@ -153,6 +176,35 @@ cBio.changeToChinese=function(){
 	$('#skills li:eq(1) span').text(this.skills[1]);
 }
 
+bio.changeToEnglish=function(){
+	$('#name').text(this.name);
+	$('#header span:first').text(this.role);
+	console.log(this.contacts.location);
+	$('#header li:eq(0) .orange-text').text('contact');
+	$('#header li:eq(0) .white-text').text('info');
+	$('#header li:eq(1) .orange-text').text('mobile');
+	$('#header li:eq(3) .orange-text').text('location');
+	$('#skills-h3').text('Skills at a Glance');
+	$('#header li:eq(3) .white-text').text(this.contacts.location);
+	$('.welcome-message').text(this.welcomeMessage);
+	$('#skills li:eq(0) span').text(this.skills[0]);
+	$('#skills li:eq(1) span').text(this.skills[1]);
+}
+
+function translateTheLanguage(){
+	$('#name').text(this.name);
+	$('#header span:first').text(this.role);
+	console.log(this.contacts.location);
+	$('#header li:eq(0) .orange-text').text(this.contactsway);
+	$('#header li:eq(0) .white-text').text(this.info);
+	$('#header li:eq(1) .orange-text').text(this.mobileMark);
+	$('#header li:eq(3) .orange-text').text(this.locationMark);
+	$('#skills-h3').text(this.skillsGlance);
+	$('#header li:eq(3) .white-text').text(this.contacts.location);
+	$('.welcome-message').text(this.welcomeMessage);
+	$('#skills li:eq(0) span').text(this.skills[0]);
+	$('#skills li:eq(1) span').text(this.skills[1]);
+}
 // cBio.changeToChinese();
 
 work.displayWork=function(){
@@ -199,8 +251,14 @@ function inName(){
 $("#main").append(chineseButton);
 
 $("#button").click(function(){
-      cBio.changeToChinese();
-      $("#button").text("变成英文");
+	if($('#button').text()==="变成中文")
+	{
+		cBio.changeToChinese();
+	}
+	else
+	{
+		bio.changeToEnglish();
+	}
 })
 
 displayMap=function(){
