@@ -1,11 +1,7 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-// var awesomeThoughts;
-// awesomeThoughts="I am xueyan and I am awesome!"
-// console.log(awesomeThoughts);
-// funThoughts=awesomeThoughts.replace("awesome","fun");
-// $("#main").append(funThoughts);
+
 
 
 var bio={
@@ -19,13 +15,13 @@ var bio={
 	},
 	"bioPic":"images/fry.jpg",
 	"welcomeMessage":"welcome",
-	"skills":["English","programming"]
+	"skills":["English","programming"],
 //标识符
-    "contactsway":"contact";
-    "info":"info";
-    "mobileMark":"mobile";
-    "locationMark":"Hangzhou";
-    "skillsGlance":"Skills at a Glance";
+    "contactsway":"contact",
+    "info":"info",
+    "mobileMark":"mobile",
+    "locationMark":"Hangzhou",
+    "skillsGlance":"Skills at a Glance"
 }
 
 var cBio={
@@ -39,57 +35,34 @@ var cBio={
 	},
 	"bioPic":"images/fry.jpg",
 	"welcomeMessage":"欢迎",
-	"skills":["英语","编程"]
-}
-// var work={};
-// work.position="students";
-// work.employer="jobs";
-
-// var education={}
-// education["name"]="Peking University";
-// education["years"]="17";
-// $("#main").append(education.years);
-// $("#main").append(work["position"]);
-
-var work={
-	"jobs":[{
-	"employer":"zhejiang University of technology",
-	"title":"graduate",
-	"location":"HangZhou",
-	"date":2016,
-	"description":"I have a master degree."
-
-},{
-	"employer":"siyuejiaoyu",
-	"title":"English Teacher",
-	"location":"Hangzhou",
-	"date":2016,
-	"description":"I am a on-line Teacher."
-}]
+	"skills":["英语","编程"],
+//标识符
+	"contactsway":"联系方式",
+	"info":"信息",
+	"mobileMark":"移动电话",
+	"locationMark":"杭州",
+	"skillsGlance":"技能浏览"
 }
 
-var cWork={
-	"jobs":[{
-	"employer":"zhejiang University of technology",
-	"title":"graduate",
-	"location":"HangZhou",
-	"date":2016,
-	"description":"I have a master degree."
 
-},{
-	"employer":"siyuejiaoyu",
-	"title":"English Teacher",
-	"location":"Hangzhou",
-	"date":2016,
-	"description":"I am a on-line Teacher."
-}]
-}
+// var work={
+// 	"jobs":[{
+// 	"employer":"司越教育",
+// 	"title":"英语老师",
+// 	"location":"杭州",
+// 	"date":2016,
+// 	"description":"线上英语老师。"
+// }]
+// }
 
 var projects=[{
-	"title":"my English qualification",
+	"title":"作品集展示网站",
 	"dates":"2016/11/14",
-	"description":"I have a lot of English certificates",
-	"images":["images/hellibotty","images/gameOfThrone"]
+	"description":"展示我的前端作品集"
+},{
+	"title":"中英文简历",
+	"dates":"2016//12/1",
+	"description":"能够实现中英文转换的简历"
 }]
 
 
@@ -97,17 +70,13 @@ var education={
 
 	"schools":[
 	{
-		"name":"zhejiang technology of university",
-		"location":"Hangzhou",
-		"dates":"2013",
+		"name":"浙江工业大学",
+		"location":"杭州",
+		"degree":"硕士",
+		"dates":"2009",
 		"url":"http://www.zjut.edu.cn",
-		"majors":["programing","studying","communication"],
-		"minors":["English","arts","musics"]
-	},{
-		"name":"petroleum high school",
-		"location":"puYang",
-		"dates":"2003",
-		"url":"http://www.hagaozhong.com"
+		"majors":["信息与通信工程"],
+		"minors":["英语"]
 	}
 	],
 	"onlineCourses":[{
@@ -159,42 +128,12 @@ bio.displayBio=function(){
 
 bio.displayBio();
 
-//自我描述变成中文
+//自定义自我简介翻译函数
 
-cBio.changeToChinese=function(){
+function bioTranslation(){
 	$('#name').text(this.name);
 	$('#header span:first').text(this.role);
-	console.log(this.contacts.location);
-	$('#header li:eq(0) .orange-text').text('联系方式');
-	$('#header li:eq(0) .white-text').text('信息');
-	$('#header li:eq(1) .orange-text').text('移动电话');
-	$('#header li:eq(3) .orange-text').text('位置');
-	$('#skills-h3').text('技能浏览');
-	$('#header li:eq(3) .white-text').text(this.contacts.location);
-	$('.welcome-message').text(this.welcomeMessage);
-	$('#skills li:eq(0) span').text(this.skills[0]);
-	$('#skills li:eq(1) span').text(this.skills[1]);
-}
-
-bio.changeToEnglish=function(){
-	$('#name').text(this.name);
-	$('#header span:first').text(this.role);
-	console.log(this.contacts.location);
-	$('#header li:eq(0) .orange-text').text('contact');
-	$('#header li:eq(0) .white-text').text('info');
-	$('#header li:eq(1) .orange-text').text('mobile');
-	$('#header li:eq(3) .orange-text').text('location');
-	$('#skills-h3').text('Skills at a Glance');
-	$('#header li:eq(3) .white-text').text(this.contacts.location);
-	$('.welcome-message').text(this.welcomeMessage);
-	$('#skills li:eq(0) span').text(this.skills[0]);
-	$('#skills li:eq(1) span').text(this.skills[1]);
-}
-
-function translateTheLanguage(){
-	$('#name').text(this.name);
-	$('#header span:first').text(this.role);
-	console.log(this.contacts.location);
+	// console.log(this.contacts.location);
 	$('#header li:eq(0) .orange-text').text(this.contactsway);
 	$('#header li:eq(0) .white-text').text(this.info);
 	$('#header li:eq(1) .orange-text').text(this.mobileMark);
@@ -205,63 +144,74 @@ function translateTheLanguage(){
 	$('#skills li:eq(0) span').text(this.skills[0]);
 	$('#skills li:eq(1) span').text(this.skills[1]);
 }
-// cBio.changeToChinese();
 
-work.displayWork=function(){
-	work.jobs.forEach(function(element){
-	$("#workExperience").append(HTMLworkStart);
-	workEmployer=HTMLworkEmployer.replace("%data%",element.employer);
-	workTitle=HTMLworkTitle.replace("%data%",element.title);
-	theWorkThing=workEmployer+workTitle;
-	$(".work-entry:last").append(theWorkThing);
-	var formattedDate=HTMLworkDates.replace("%data%",element.date);
-	// console.log(formatteddate);
-	$(".work-entry:last").append(formattedDate);
-	var formattedDescription=HTMLworkDescription.replace("%data%",element.description);	
-	// console.log(formattedDescription);
-    $(".work-entry:last").append(formattedDescription);
+cBio.changeToChinese=bioTranslation;
+bio.changeToEnglish=bioTranslation;
 
-})
-}
 
-work.displayWork();
-// $(document).click(function(loc){
-// 	logClicks(loc.pageX,loc.pageY);
-// })
 
+//
+
+//项目经历
 projects.displayProject=function(){
 	projects.forEach(function(element){
 		$("#projects").append(HTMLprojectStart);
-		formattedTitle=HTMLworkTitle.replace("%data%",element.title);
+		formattedTitle=HTMLprojectTitle.replace("%data%",element.title);
 		$(".project-entry:last").append(formattedTitle);
+		formattedDates=HTMLprojectDates.replace("%data%",element.dates);
+		$('.project-entry:last').append(formattedDates);
+		formattedDescription=HTMLprojectDescription.replace('%data%',element.description);
+		$('.project-entry:last').append(formattedDescription);
 	})
 
 }
 
 projects.displayProject();
-function inName(){
-		interNa=bio.name.split(" ");
-		bio.name=interNa[0].slice(0,1).toUpperCase()+interNa[0].slice(1)+" "+interNa[1].toUpperCase();
-		// console.log(bio.name);
-		$("#name").remove();
-		interNa=HTMLheaderName.replace("%data%",bio.name);
-		$("#header").prepend(interNa);
-	}
 
-$("#main").append(chineseButton);
+//教育经历
+education.displayEducation=function(){
+	    this.schools.forEach(function(element){
+		$('#education').append(HTMLschoolStart);
+		formattedSchoolName=HTMLschoolName.replace("%data%",element.name);
+		$('.education-entry:last').append(formattedSchoolName);
+		formattedSchoolDegree=HTMLschoolDegree.replace("%data%",element.degree);
+		$('.education-entry:last').append(formattedSchoolDegree);
+		formattedDates=HTMLschoolDates.replace("%data%",element.dates);
+		console.log(formattedDates);
+		$('.education-entry:last').append(formattedDates);
+		formattedSchoolLocation=HTMLschoolLocation.replace("%data%",element.location);
+		$('.education-entry:last').append(formattedSchoolLocation);
+		formattedMajor=HTMLschoolMajor.replace("%data%",element.majors);
+		$('.education-entry:last').append(formattedMajor);
+	})
+}
+
+education.displayEducation();
+// function inName(){
+// 		interNa=bio.name.split(" ");
+// 		bio.name=interNa[0].slice(0,1).toUpperCase()+interNa[0].slice(1)+" "+interNa[1].toUpperCase();
+// 		// console.log(bio.name);
+// 		$("#name").remove();
+// 		interNa=HTMLheaderName.replace("%data%",bio.name);
+// 		$("#header").prepend(interNa);
+// 	}
+
+$("#main").prepend(chineseButton);
 
 $("#button").click(function(){
 	if($('#button').text()==="变成中文")
 	{
 		cBio.changeToChinese();
+		$('#button').text("变成英文");
 	}
 	else
 	{
 		bio.changeToEnglish();
+		$('#button').text("变成中文");
 	}
 })
 
-displayMap=function(){
+var displayMap=function(){
 	console.log(googleMap);
 	$("#mapDiv").append(googleMap);
 };

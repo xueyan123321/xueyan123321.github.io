@@ -43,13 +43,18 @@ li {
     /* margin: 1%; */
 }
 
-div#demoPart {
+#demoPart {
     display: flex;
 }
 
 
-div#themeImg {
+#themeImg {
     margin-top: 2%;
+    text-align: right;
+}
+
+#themeImag img{
+    width:60%;
 }
 
 p {
