@@ -13,11 +13,20 @@
  * the canvas' context (ctx) object globally available to make writing app.js
  * a little simpler to work with.
  */
+ /*
+ Engine.js
+ 文件主要提供游戏的循环更新功能(更新数据实体和渲染)，实体主要包括enemies和player。
+ 将最初的游戏背景化在屏幕上，然后调用player和enemy对象的更新和渲染方法。
+
+ 游戏的引擎工作原理是在整个canvas上一遍又一遍的渲染，像小时候的翻页书一样。当玩家在游戏中
+ 移动，好像图片在移动，实际上只不过整个屏幕在以设置时间dt一遍一遍渲染罢了。
+
+ Engine是全局变量，并将canvas的内容对象ctx赋值到全局变量global.ctx中。app.js就可以用ctx了。
+ */
 
 var Engine = (function(global) {
-    /* Predefine the variables we'll be using within this scope,
-     * create the canvas element, grab the 2D context for that canvas
-     * set the canvas elements height/width and add it to the DOM.
+    /* 
+     在全局范围内预定义变量，创建canvas，并获取canvas的2d内容，设定canvas的高和宽，并添加到DOM中。
      */
     var doc = global.document,
         win = global.window,
@@ -29,8 +38,8 @@ var Engine = (function(global) {
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
-    /* This function serves as the kickoff point for the game loop itself
-     * and handles properly calling the update and render methods.
+    /* 
+     这个函数为整个游戏循环的开始点并适当调用update和render方法。
      */
     function main() {
         /* Get our time delta information which is required if your game
@@ -38,23 +47,30 @@ var Engine = (function(global) {
          * instructions at different speeds we need a constant value that
          * would be the same for everyone (regardless of how fast their
          * computer is) - hurray time!
+         获取需要的时间信息delta，用于流畅的动画。因为每个人的电脑处理指令拥有不同
+         的速度，我们需要一个常量达到游戏效果的一致性。
          */
         var now = Date.now(),
             dt = (now - lastTime) / 1000.0;
 
+
+
         /* Call our update/render functions, pass along the time delta to
          * our update function since it may be used for smooth animation.
+         调用update和render函数，给update函数传递时间量delta，它用于流畅的动画。
          */
         update(dt);
         render();
 
         /* Set our lastTime variable which is used to determine the time delta
          * for the next time this function is called.
+         设置lastTime变量用于决定时间delta，用于下一次函数的调用。
          */
         lastTime = now;
 
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
+         用浏览器的requestAnimationFrame函数再次调用这个函数来绘制另一帧。每秒反复调用60次函数。
          */
         win.requestAnimationFrame(main);
     }
@@ -62,6 +78,7 @@ var Engine = (function(global) {
     /* This function does some initial setup that should only occur once,
      * particularly setting the lastTime variable that is required for the
      * game loop.
+     这个函数主要完成一些初始化设置，且只调用一次，特别是设置lastTime变量为游戏循环服务。
      */
     function init() {
         reset();
@@ -77,6 +94,7 @@ var Engine = (function(global) {
      * it commented out - you may or may not want to implement this
      * functionality this way (you could just implement collision detection
      * on the entities themselves within your app.js file).
+     这个函数被main调用，并且它自己调用所有的相关函数，用于更新函数实体数据。
      */
     function update(dt) {
         updateEntities(dt);
@@ -89,6 +107,7 @@ var Engine = (function(global) {
      * player object. These update methods should focus purely on updating
      * the data/properties related to the object. Do your drawing in your
      * render methods.
+     这个函数被更新函数所调用，遍历app.js中所有的enemy并且调用它们的update()方法。
      */
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
@@ -102,6 +121,7 @@ var Engine = (function(global) {
      * game tick (or loop of the game engine) because that's how games work -
      * they are flipbooks creating the illusion of animation but in reality
      * they are just drawing the entire screen over and over.
+     这个函数起初绘制游戏背景，然后绘制游戏实体，每个游戏时钟都会调用一次这个函数。
      */
     function render() {
         /* This array holds the relative URL to the image used
