@@ -10,23 +10,29 @@
 	</head>
 	<body>
 		<header class="row">
-			<div id="headerl" class="col-md-3">
+			<div id="headerl" class="col-md-2">
 				<img src="image/浙江工业大学校徽.png"/>
 				<p>浙江工业大学</p>
 			</div>
-			<div id="headerr" class="col-md-9">
+			<div id="headerr" class="col-md-10">
 				<h1>前端作品集展示</h1>
 				<div>
 					<strong>薛琰</strong>
 				</div>
+				<ul>
+					<a href="#selfIntroduction">个人简介</a>
+					<a href="#mooc">MOOC证书展示</a>
+					<a href="#featuredWork">特色作品</a>
+					<a href="https://github.com/">github账号地址</a>
+				</ul>
 			</div>
 		</header>
 	<div class="demo">
 		<div id="someIntroduction">
-			<h2>个人简介</h2>
+			<h2 id="selfIntroduction">个人简介</h2>
   
   		<li>有良好的英文基础，曾经做过英文老师，六级成绩538，无障碍阅读各种英文文档和听懂各种技术视频。
-  coursera和udacity均为优质的全英文在线教程。依靠优秀的英文基础，对于前端知识的更新有很强的适应性。</li>
+  			coursera和udacity均为优质的全英文在线教程。依靠优秀的英文基础，对于前端知识的更新有很强的适应性。</li>
  
   		<li>本身是浙江通信工程专业，硕士学位，有较强的IT背景。热爱IT技术。</li>
 
@@ -37,21 +43,19 @@
 		</div>
 	</div>
 		<div>
-			<h2>特色作品集</h2>
+			<h2 id='featuredWork'>特色作品集</h2>
 			<div class="demo">
-				<ul>
+				<ul id='demoList'>
 					<li class="col-md-4">
 						<figure>
 							<img src="image/前端简历图.png" class="img-responsive img-thumbnail" data-toggle="modal" data-target="#project1"/>
-							<figcaption>个人简历</figcaption>
-							<p><a href="frontend-nanodegree-resume/resume.html">前端简历</a></p>
+							<figcaption><a href="frontend-nanodegree-resume/resume.html">前端简历</a></figcaption>
 						</figure>
 					</li>
 					<li class="col-md-4">
 						<figure>
-							<img src="image/青蛙过河.jpg" class="img-responsive img-thumbnail"/>
-							<figcaption>javascript小游戏</figcaption>
-							<p><a href="arcade-game/arcade.html">青蛙过河</a></p>
+							<img src="image/青蛙过河.jpg" class="img-responsive img-thumbnail" data-toggle="modal" data-target="#project2"/>
+							<figcaption><a href="arcade-game/arcade.html">青蛙过河</a></figcaption>
 						</figure>
 					</li>
 					<li class="col-md-4">
@@ -64,22 +68,43 @@
 				</ul>		
 			</div>
 		</div>
+
+<!--bootstrap的modal-->
 		<div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">个人简历</h4>
-	      </div>
-	      <div class="modal-body">
-	       <img class="img-responsive" src="image/前端简历图.png" />
-	       简历包括中文和英文两个版本，可以实现中英文转换。
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+	  		<div class="modal-dialog" role="document">
+	    		<div class="modal-content">
+	      			<div class="modal-header">
+	        			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        			<h4 class="modal-title" id="myModalLabel">个人简历</h4>
+	      			</div>
+	      			<div class="modal-body">
+	       				<img class="img-responsive" src="image/前端简历图.png" />
+	       				简历包括中文和英文两个版本，可以实现中英文转换。
+	      			</div>
+	      			<div class="modal-footer">
+	        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      			</div>
+	    		</div>
+	  		</div>
+		</div>
+
+		<div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  		<div class="modal-dialog" role="document">
+	    		<div class="modal-content">
+	      			<div class="modal-header">
+	        			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        			<h4 class="modal-title" id="myModalLabel">个人简历</h4>
+	      			</div>
+	      			<div class="modal-body">
+	       				<img class="img-responsive" src="image/青蛙过河.jpg" />
+	       				一个小游戏，避开七星飘虫过河。
+	      			</div>
+	      			<div class="modal-footer">
+	        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      			</div>
+	    		</div>
+	  		</div>
+		</div>
+
 	</body>
 </html>
