@@ -12,7 +12,10 @@ strong{
     margin-top: 5%;
 }
 
-
+nav{
+    text-align:center;
+    margin-top:1%;
+}
 
 #headerr div {
     text-align: center;
@@ -116,4 +119,38 @@ figcaption{
 
 figure p{
     text-align:center;
+}
+
+#themeImg img{
+    position: absolute;
+}
+
+#themeImg ol{
+    background-color:#808080;
+    position:absolute;
+    border-radius: 5px;
+}
+
+#themeImg ol li:first-child{
+    border-left:red solid 5px;
+    border-radius:5px 0px 0px 5px;
+}
+
+#themeImg ol li:last-child{
+    border-radius:0px 5px 5px 0px;
+}
+
+#themeImg ol li{
+    display:inline-block;
+    border-right:red solid 5px;
+    padding-right: 20px;
+    padding-left:20px;
+}
+
+#featuredemo {
+    margin-top:300px;
+}
+
+#themeImg ol{
+    padding-left: 0px;
 }
