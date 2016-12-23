@@ -134,6 +134,7 @@ figure p{
 #themeImg ol li:first-child{
     border-left:red solid 5px;
     border-radius:5px 0px 0px 5px;
+    margin-left: 0px;
 }
 
 #themeImg ol li:last-child{
@@ -145,6 +146,7 @@ figure p{
     border-right:red solid 5px;
     padding-right: 20px;
     padding-left:20px;
+    margin-left: -4px;
 }
 
 #featuredemo {
