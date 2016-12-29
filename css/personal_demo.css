@@ -1,104 +1,11 @@
-*{
-	/* border:solid 1px red; */
+
+body {
+    margin: 2%;
 }
 
-body{
-    margin:2%;
-}
-
-strong{
-    display: inline-block;
-    text-align: center;
-    margin-top: 5%;
-}
-
-nav{
-    text-align:center;
-    margin-top:1%;
-}
-
-#headerr div {
-    text-align: center;
-    width:20%;
-    font-size: 1.5em;
-    margin:0 auto;
-}
-
-#headerr ul{
-    text-align: center;
-    margin-top: 2%;
-}
-
-#headerr a{
-    display: inline-block;
-    background-color:rgba(255,255,0,0.5);
-    font-size: 18px;
-    border-radius:5px;
-    margin-right: 50px;
-    color: #000000;
-    padding:5px;
-    background: url('../image/finger.png') no-repeat;
-    padding-left: 30px;
-}
-
-
-#someIntroduction{
-    margin-top:2%;
-    width:50%;
-}
-#someIntroduction h2{
-    margin-top: 2%;
-    margin-bottom:5%;
-    display: inline-block;
-
-}
-
-#someIntroduction li{
-    margin-bottom: 2%;
-    margin-right:5%;
-}
-
-#headerl img {
-    width: 90%;
-}
-
-h3 {
-    margin-bottom: 0;
-}
-
-figure {
-    margin: 0;
-}
-
-ul {
-    width: 100%;
-    padding-left: 0;
-    margin-top: 0;
-}
-
-#demoList li {
-    float: left;
-    list-style-type: none;
-    /* width: 30%; */
-    padding: 0 !important;
-    /* margin: 1%; */
-}
-
-.demo {
-    display: flex;
-}
-
-
-#themeImg {
-    margin-top: 2%;
-}
-
-
-#headerl p {
-    width: 90%;
-    text-align: center;
-    display:inline-block;
-    margin-bottom: 2%;
+/*header*/
+.header {
+    border-bottom: solid 10px #1BFF00;
 }
 
 h1 {
@@ -107,52 +14,150 @@ h1 {
     text-align: center;
 }
 
-
-header.row {
-    display: flex;
-    border-bottom: solid 10px #1BFF00;
+strong {
+    display: inline-block;
+    text-align: center;
+    margin-top: 5%;
 }
+
+nav {
+    text-align:center;
+    margin-top:1%;
+}
+
+.headerl img {
+    width: 90%;
+}
+
+.headerr div {
+    text-align: center;
+    width:20%;
+    font-size: 1.5em;
+    margin:0 auto;
+}
+
+.headerr ul {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.headerr a {
+    display: inline-block;
+    background-color: rgba(255,255,0,0.5);
+    border-radius:5px;
+    margin-right: 50px;
+    color: #000000;
+    padding: 5px;
+    background: url('../image/finger.png') no-repeat;
+    padding-left: 30px;
+}
+
+/*theme-img*/
+
+.some-introduction {
+    margin-top:2%;
+}
+
+.some-introduction h2 {
+    margin-top: 2%;
+    margin-bottom:5%;
+    display: inline-block;
+
+}
+
+.some-introduction ul {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.some-introduction li {
+    margin-bottom: 2%;
+    margin-right:5%;
+}
+
+
+/*featured-demo*/
+.featured-demo{
+    margin-top: 100px;
+}
+
+.featured-demo h2{
+    margin-bottom: 25px;
+}
+
+.demo-list li {
+    float: left;
+    list-style-type: none;
+    padding: 0 !important;
+}
+
+
+
+.theme-img {
+    margin-top: 2%;
+}
+
+
+.headerl p {
+    width: 90%;
+    text-align: center;
+    display:inline-block;
+    margin-bottom: 2%;
+}
+
 
 figcaption{
     text-align: center;
 }
 
 figure p{
-    text-align:center;
+    text-align: center;
 }
 
-#themeImg img{
-    position: absolute;
-}
 
-#themeImg ol{
+
+.theme-img ol{
     background-color:#808080;
-    position:absolute;
+    position: absolute;
     border-radius: 5px;
 }
 
-#themeImg ol li:first-child{
-    border-left:red solid 5px;
-    border-radius:5px 0px 0px 5px;
+.theme-img ol li:first-child{
+    border-left: red solid 5px;
+    border-radius: 5px 0px 0px 5px;
     margin-left: 0px;
 }
 
-#themeImg ol li:last-child{
-    border-radius:0px 5px 5px 0px;
+.theme-img ol li:last-child{
+    border-radius: 0px 5px 5px 0px;
 }
 
-#themeImg ol li{
-    display:inline-block;
-    border-right:red solid 5px;
+.theme-img ol li{
+    display: inline-block;
+    border-right: red solid 5px;
     padding-right: 20px;
-    padding-left:20px;
+    padding-left: 20px;
     margin-left: -4px;
 }
 
-#featuredemo {
-    margin-top:300px;
+
+.theme-img ol{
+    padding-left: 0px;
 }
 
-#themeImg ol{
-    padding-left: 0px;
+
+
+@media screen and (max-width:480px){
+    body{
+        font-size:24px;
+    }
+
+    .theme-img{
+        display: none;
+    }
+
+    a{
+        width:48px;
+    }
 }

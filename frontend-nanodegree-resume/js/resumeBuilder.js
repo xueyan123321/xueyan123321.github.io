@@ -44,17 +44,6 @@ var cBio={
 	"skillsGlance":"技能浏览"
 }
 
-
-// var work={
-// 	"jobs":[{
-// 	"employer":"司越教育",
-// 	"title":"英语老师",
-// 	"location":"杭州",
-// 	"date":2016,
-// 	"description":"线上英语老师。"
-// }]
-// }
-
 var projects=[{
 	"title":"作品集展示网站",
 	"dates":"2016/11/14",
@@ -104,22 +93,15 @@ bio.displayBio=function(){
 
 
 
-	$("#header").append(formattedName);
-	$("#header").append(formattedRole);
-	$("#header").append(formattedContactGeneric);
-	$("#header").append(formattedMoble);
-	$("#header").append(formattedGitHub);
-	$("#header").append(formattedLocation);
-	$("#header").append(formattedImage);
-	$("#header").append(formattedWelcome);
+	$("#header").append(formattedName+formattedRole+formattedContactGeneric+
+						formattedMoble+formattedGitHub+formattedLocation+
+						formattedImage+formattedWelcome);
 
 
 	if(bio.skills.length>0)
 	{
-	// console.log(bio.skills.length);
 	$("#header").append(HTMLskillsStart);
 	var HTMLskills0=HTMLskills.replace("%data%",bio.skills[0]);
-	// console.log(HTMLskills0);
 	$("#skills").append(HTMLskills0);
 	HTMLskills1=HTMLskills.replace("%data%",bio.skills[1]);
 	$("#skills").append(HTMLskills1);
@@ -133,7 +115,6 @@ bio.displayBio();
 function bioTranslation(){
 	$('#name').text(this.name);
 	$('#header span:first').text(this.role);
-	// console.log(this.contacts.location);
 	$('#header li:eq(0) .orange-text').text(this.contactsway);
 	$('#header li:eq(0) .white-text').text(this.info);
 	$('#header li:eq(1) .orange-text').text(this.mobileMark);
@@ -148,9 +129,6 @@ function bioTranslation(){
 cBio.changeToChinese=bioTranslation;
 bio.changeToEnglish=bioTranslation;
 
-
-
-//
 
 //项目经历
 projects.displayProject=function(){
@@ -187,14 +165,7 @@ education.displayEducation=function(){
 }
 
 education.displayEducation();
-// function inName(){
-// 		interNa=bio.name.split(" ");
-// 		bio.name=interNa[0].slice(0,1).toUpperCase()+interNa[0].slice(1)+" "+interNa[1].toUpperCase();
-// 		// console.log(bio.name);
-// 		$("#name").remove();
-// 		interNa=HTMLheaderName.replace("%data%",bio.name);
-// 		$("#header").prepend(interNa);
-// 	}
+
 
 $("#main").prepend(chineseButton);
 
@@ -210,6 +181,7 @@ $("#button").click(function(){
 		$('#button').text("变成中文");
 	}
 })
+
 
 var displayMap=function(){
 	console.log(googleMap);

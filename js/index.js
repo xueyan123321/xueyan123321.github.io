@@ -1,16 +1,11 @@
-// $('#themeImg li:first-child').click(function(){
-// 	 $('#themeImg img').attr('src','image/前端图标.jpg');
-// })
-
-// $('#themeImg li:nth-child(2)').click(function(){
-// 	 $('#themeImg img').attr('src','image/火影忍者.jpg');
-// })
-var themeImgLi= $('#themeImg li');
+// 这个程序主要实现幻灯片更换放映功能
 
 
+// 需要放映的幻灯片
 var imgSrc=['image/前端图标.jpg','image/火影忍者.jpg','image/udacity.jpg'];
 
-
+// 给幻灯片条目绑定处理事件
+var themeImgLi= $('.theme-img li');
 for(var i=0;i<imgSrc.length;i++)
 {
 	themeImgLi.eq(i).click(
@@ -19,11 +14,13 @@ for(var i=0;i<imgSrc.length;i++)
 			return function(){
 				themeImgLi.css('background-color','grey');
 				$(this).css('background-color','yellow');
-				$('#themeImg img').attr('src',imgSrc[j]);
+				$('.theme-img img').attr('src',imgSrc[j]);
 			}
 		})(i));
 }
 
+
+// 使用requestAnimationFrame实现循环放映
 var tick=0;//设置main函数调用tick数,每调用一次增加1。
 var index=0;//更换第几个换灯片。
 function main(){
@@ -32,7 +29,7 @@ function main(){
 		{
 			themeImgLi.css('background-color','grey')
 			themeImgLi.eq(index).css('background-color','yellow');
-			$('#themeImg img').attr('src',imgSrc[index]);
+			$('.theme-img img').attr('src',imgSrc[index]);
 			tick=0;
 			index++;
 		}
@@ -43,6 +40,7 @@ function main(){
 		}
 
 }
+
 main();
 
 
