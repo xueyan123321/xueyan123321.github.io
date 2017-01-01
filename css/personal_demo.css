@@ -1,6 +1,9 @@
 
 body {
-    margin: 2%;
+    width:90%;
+    margin:0 auto;
+    background: url('../image/网页背景.jpg')
+
 }
 
 /*header*/
@@ -23,6 +26,7 @@ strong {
 nav {
     text-align:center;
     margin-top:1%;
+    font-size:1.5em;
 }
 
 .headerl img {
@@ -50,6 +54,7 @@ nav {
     padding: 5px;
     background: url('../image/finger.png') no-repeat;
     padding-left: 30px;
+    padding-top:0px;
 }
 
 /*theme-img*/
@@ -111,6 +116,10 @@ figcaption{
     text-align: center;
 }
 
+figcaption a{
+    font-size: 1.2em;
+}
+
 figure p{
     text-align: center;
 }
@@ -150,7 +159,8 @@ figure p{
 
 @media screen and (max-width:480px){
     body{
-        font-size:24px;
+        font-size:16px;
+        line-height: 1.25em;
     }
 
     .theme-img{
@@ -159,5 +169,10 @@ figure p{
 
     a{
         width:48px;
+    }
+
+    strong{
+        margin:10px;
+        width:50px;
     }
 }
