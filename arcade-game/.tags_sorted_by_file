@@ -1,0 +1,25 @@
+Enemy	js\app.js	/^var Enemy = function(obj) {$/;"	c
+Enemy.render	js\app.js	/^Enemy.prototype.render = function() {$/;"	m
+Enemy.update	js\app.js	/^Enemy.prototype.update = function(dt) {$/;"	m
+Player	js\app.js	/^var Player=function(x,y){$/;"	c
+Player.handleInput	js\app.js	/^Player.prototype.handleInput=function(keyvalue){$/;"	m
+Player.render	js\app.js	/^Player.prototype.render=function(){$/;"	m
+Player.update	js\app.js	/^Player.prototype.update=function(){$/;"	m
+_load	js\resources.js	/^    function _load(url) {$/;"	f
+get	js\resources.js	/^    function get(url) {$/;"	f
+img.onload	js\resources.js	/^            img.onload = function() {$/;"	f
+isReady	js\resources.js	/^    function isReady() {$/;"	f
+load	js\resources.js	/^    function load(urlOrArr) {$/;"	f
+loading	js\resources.js	/^    var loading = [];$/;"	v
+onReady	js\resources.js	/^    function onReady(func) {$/;"	f
+readyCallbacks	js\resources.js	/^    var readyCallbacks = [];$/;"	v
+window.Resources.get	js\resources.js	/^        get: get,$/;"	p
+window.Resources.isReady	js\resources.js	/^        isReady: isReady$/;"	p
+window.Resources.load	js\resources.js	/^        load: load,$/;"	p
+window.Resources.onReady	js\resources.js	/^        onReady: onReady,$/;"	p
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/

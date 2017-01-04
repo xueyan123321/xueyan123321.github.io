@@ -11,6 +11,11 @@ body {
     border-bottom: solid 10px #1BFF00;
 }
 
+iframe{
+    position: absolute;
+    margin-left: 85%;
+}
+
 h1 {
     margin-bottom: 0;
     margin-top: 4%;
@@ -100,6 +105,7 @@ nav {
 
 
 .theme-img {
+    padding-left: 4%;
     margin-top: 2%;
 }
 
@@ -133,7 +139,7 @@ figure p{
 }
 
 .theme-img ol li:first-child{
-    border-left: red solid 5px;
+    border-left: #FF0000 solid 5px;
     border-radius: 5px 0px 0px 5px;
     margin-left: 0px;
 }
@@ -144,7 +150,7 @@ figure p{
 
 .theme-img ol li{
     display: inline-block;
-    border-right: red solid 5px;
+    border-right: #FF0000 solid 5px;
     padding-right: 20px;
     padding-left: 20px;
     margin-left: -4px;
@@ -174,5 +180,9 @@ figure p{
     strong{
         margin:10px;
         width:50px;
+    }
+
+    iframe{
+        display: none;
     }
 }

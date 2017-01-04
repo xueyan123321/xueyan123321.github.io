@@ -1,0 +1,66 @@
+HTMLbioPic	js\helper.js	/^var HTMLbioPic = '<img src="%data%" class="biopic">';$/;"	v
+HTMLblog	js\helper.js	/^var HTMLblog = '<li class="flex-item"><span class="orange-text">blog<\/span><span class="white-text">%data%<\/span><\/li>';$/;"	v
+HTMLcontactGeneric	js\helper.js	/^var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%<\/span><span class="white-text">%data%<\/span><\/li>';$/;"	v
+HTMLemail	js\helper.js	/^var HTMLemail = '<li class="flex-item"><span class="orange-text">email<\/span><span class="white-text">%data%<\/span><\/li>';$/;"	v
+HTMLgithub	js\helper.js	/^var HTMLgithub = '<li class="flex-item"><span class="orange-text">github<\/span><span class="white-text">%data%<\/span><\/li>';$/;"	v
+HTMLheaderName	js\helper.js	/^var HTMLheaderName = '<h1 id="name">%data%<\/h1>';$/;"	v
+HTMLheaderRole	js\helper.js	/^var HTMLheaderRole = '<span>%data%<\/span><hr>';$/;"	v
+HTMLlocation	js\helper.js	/^var HTMLlocation = '<li class="flex-item"><span class="orange-text">location<\/span><span class="white-text">%data%<\/span><\/li>';$/;"	v
+HTMLmobile	js\helper.js	/^var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile<\/span><span class="white-text">%data%<\/span><\/li>';$/;"	v
+HTMLonlineClasses	js\helper.js	/^var HTMLonlineClasses = '<h3>Online Classes<\/h3>';$/;"	v
+HTMLonlineDates	js\helper.js	/^var HTMLonlineDates = '<div class="date-text">%data%<\/div>';$/;"	v
+HTMLonlineSchool	js\helper.js	/^var HTMLonlineSchool = ' - %data%<\/a>';$/;"	v
+HTMLonlineTitle	js\helper.js	/^var HTMLonlineTitle = '<a href="#">%data%';$/;"	v
+HTMLonlineURL	js\helper.js	/^var HTMLonlineURL = '<br><a href="#">%data%<\/a>';$/;"	v
+HTMLprojectDates	js\helper.js	/^var HTMLprojectDates = '<div class="date-text">%data%<\/div>';$/;"	v
+HTMLprojectDescription	js\helper.js	/^var HTMLprojectDescription = '<p><br>%data%<\/p>';$/;"	v
+HTMLprojectImage	js\helper.js	/^var HTMLprojectImage = '<img src="%data%">';$/;"	v
+HTMLprojectStart	js\helper.js	/^var HTMLprojectStart = '<div class="project-entry"><\/div>';$/;"	v
+HTMLprojectTitle	js\helper.js	/^var HTMLprojectTitle = '<a href="#">%data%<\/a>';$/;"	v
+HTMLschoolDates	js\helper.js	/^var HTMLschoolDates = '<div class="date-text">%data%<\/div>';$/;"	v
+HTMLschoolDegree	js\helper.js	/^var HTMLschoolDegree = ' -- %data%<\/a>';$/;"	v
+HTMLschoolLocation	js\helper.js	/^var HTMLschoolLocation = '<div class="location-text">%data%<\/div>';$/;"	v
+HTMLschoolMajor	js\helper.js	/^var HTMLschoolMajor = '<em><br>专业: %data%<\/em>';$/;"	v
+HTMLschoolName	js\helper.js	/^var HTMLschoolName = '<a href="#">%data%';$/;"	v
+HTMLschoolStart	js\helper.js	/^var HTMLschoolStart = '<div class="education-entry"><\/div>';$/;"	v
+HTMLskills	js\helper.js	/^var HTMLskills = '<li class="flex-item"><span class="white-text">%data%<\/span><\/li>';$/;"	v
+HTMLskillsStart	js\helper.js	/^var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:<\/h3><ul id="skills" class="flex-column"><\/ul>';$/;"	v
+HTMLtwitter	js\helper.js	/^var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter<\/span><span class="white-text">%data%<\/span><\/li>';$/;"	v
+HTMLwelcomeMsg	js\helper.js	/^var HTMLwelcomeMsg = '<span class="welcome-message">%data%<\/span>';$/;"	v
+HTMLworkDates	js\helper.js	/^var HTMLworkDates = '<div class="date-text">%data%<\/div>';$/;"	v
+HTMLworkDescription	js\helper.js	/^var HTMLworkDescription = '<p><br>%data%<\/p>';$/;"	v
+HTMLworkEmployer	js\helper.js	/^var HTMLworkEmployer = '<a href="#">%data%';$/;"	v
+HTMLworkLocation	js\helper.js	/^var HTMLworkLocation = '<div class="location-text">%data%<\/div>';$/;"	v
+HTMLworkStart	js\helper.js	/^var HTMLworkStart = '<div class="work-entry"><\/div>';$/;"	v
+HTMLworkTitle	js\helper.js	/^var HTMLworkTitle = ' - %data%<\/a>';$/;"	v
+chineseButton	js\helper.js	/^var chineseButton = '<button id="button">变成中文<\/button>';$/;"	v
+clickLocations	js\helper.js	/^var clickLocations = [];$/;"	v
+googleMap	js\helper.js	/^var googleMap = '<div id="map"><\/div>';$/;"	v
+initializeMap	js\helper.js	/^function initializeMap() {$/;"	f
+initializeMap.callback	js\helper.js	/^  function callback(results, status) {$/;"	f
+initializeMap.createMapMarker	js\helper.js	/^  function createMapMarker(placeData) {$/;"	f
+initializeMap.locationFinder	js\helper.js	/^  function locationFinder() {$/;"	f
+initializeMap.mapOptions.disableDefaultUI	js\helper.js	/^    disableDefaultUI: true$/;"	p
+initializeMap.pinPoster	js\helper.js	/^  function pinPoster(locations) {$/;"	f
+logClicks	js\helper.js	/^function logClicks(x,y) {$/;"	f
+map	js\helper.js	/^var map;    \/\/ declares a global map variable$/;"	v
+isArraylike	js\jQuery.js	/^function isArraylike( obj ) {$/;"	f
+jQuery.fn.init	js\jQuery.js	/^jQuery.fn.init.prototype = jQuery.fn;$/;"	c
+jQuery.ready.promise	js\jQuery.js	/^jQuery.ready.promise = function( obj ) {$/;"	f
+$	js\resumeBuilder.js	/^$("#button").click(function(){$/;"	m
+bio.contacts	js\resumeBuilder.js	/^	"contacts":{$/;"	p
+bio.displayBio	js\resumeBuilder.js	/^bio.displayBio=function(){$/;"	f
+bio.name	js\resumeBuilder.js	/^	"name":"Xue Yan",$/;"	p
+bio.role	js\resumeBuilder.js	/^	"role":"Web Developer",$/;"	p
+bioTranslation	js\resumeBuilder.js	/^function bioTranslation(){$/;"	f
+cBio.contacts	js\resumeBuilder.js	/^	"contacts":{$/;"	p
+cBio.name	js\resumeBuilder.js	/^	"name":"薛琰",$/;"	p
+cBio.role	js\resumeBuilder.js	/^	"role":"网站开发",$/;"	p
+projects.displayProject	js\resumeBuilder.js	/^projects.displayProject=function(){$/;"	f
+schools	js\resumeBuilder.js	/^	"schools":[$/;"	p
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
