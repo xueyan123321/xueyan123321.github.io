@@ -128,7 +128,7 @@ function bioTranslation(){
 
 cBio.changeToChinese=bioTranslation;
 bio.changeToEnglish=bioTranslation;
-
+cBio.changeToChinese();//初始化为中文，利于百度地图收索。
 
 //项目经历
 projects.displayProject=function(){
