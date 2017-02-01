@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>MemeMaker-Simple</title>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <style>
+    #image-container {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <input type="file" id="file" />  
+  </div>
+  <div id="image-container">
+   <!--  创建一个CANVAS元素 -->
+    <canvas width="500" height="500"></canvas>
+    <div>
+      <span>Top Line:</span><br/>
+      <input id="topLineText" type="text"><br/>
+      <span>Bottom Line:</span><br/>
+      <input id="bottomLineText" type="text"><br/>
+      <button id="saveBtn">Save</button>
+    </div>
+  </div>
+  <script>
+  // 定义输入文本的处理器
+    function textChangeListener (evt) {
+      // 获取目标对象的id和value值
+      var id = evt.target.id;
+      var text = evt.target.value;
+      if (id == "topLineText") {
+        // 获取全局变量
+        window.topLineText = text;
+      } else {
+        window.bottomLineText = text;
+      }
+      
+      redrawMeme(window.imageSrc, window.topLineText, window.bottomLineText);
+    }
+    
+    function redrawMeme(image, topLine, bottomLine) {
+      // 获取CANVAS的2d内容，并画表情包。
+      var canvas = document.querySelector('canvas');
+      var ctx = canvas.getContext("2d");
+
+      if(image!=null)
+      {
+        ctx.drawImage(image,0,0,canvas.width,canvas.height);
+      }
+
+      ctx.strokeStyle="black";
+      ctx.fillStyle="white";
+      ctx.font="36pt Imapct";
+      ctx.lineWidth=3;
+      ctx.textAlign="center";
+
+      // console.log(topLine);
+      if(topLine!=null)
+      {
+        ctx.strokeText(topLine,canvas.width/2,100);
+        ctx.fillText(topLine,canvas.width/2,100);
+      }
+
+      // console.log(bottomLine);
+      if(bottomLine!=null)
+      {
+        ctx.strokeText(bottomLine,canvas.width/2,450);
+        ctx.fillText(bottomLine,canvas.width/2,450);
+      
+      }
+
+    }
+    
+    function saveFile() {
+      window.open(document.querySelector('canvas').toDataURL());
+    }
+    
+    function handleFileSelect(evt) {
+      var canvasWidth = 500;
+      var canvasHeight = 500;
+      var file = evt.target.files[0];
+      
+      
+      
+      var reader = new FileReader();
+      reader.onload = function(fileObject) {
+        var data = fileObject.target.result;
+        
+        // 创建一个image对象。绘制在canvas上。
+        var image = new Image();
+        image.onload = function() {
+          
+          window.imageSrc = this;
+          redrawMeme(window.imageSrc, null, null);
+          var imageData=ctx.getImageData(0,0,500,500);
+          console.log(imageData.data.length);
+          for(var i=0;i<=imageData.data.length/4;i++)
+            {
+              imageData.data[4*i]=(imageData.data[4*i]+imageData.data[4*i+1]+imageData.data[4*i+2])/3
+              imageData.data[4*i+1]=imageData.data[4*i];
+              imageData.data[4*i+2]=imageData.data[4*i];
+            }
+          console.log(imageData.data[0]);
+          ctx.putImageData(imageData,0,0);
+        }
+        
+        // 将image对象作为背景图像。
+        image.src = data;
+        console.log(fileObject.target.result);
+      };
+      reader.readAsDataURL(file);
+
+    }
+    
+    window.topLineText = "";
+    window.bottomLineText = "";
+    var input1 = document.getElementById('topLineText');
+    var input2 = document.getElementById('bottomLineText');
+    input1.oninput = textChangeListener;
+    input2.oninput = textChangeListener;
+    document.getElementById('file').addEventListener('change', handleFileSelect, false);
+    document.querySelector('button').addEventListener('click', saveFile, false);
+
+    var canvas=document.querySelector("canvas");
+    var ctx=canvas.getContext("2d");
+
+  </script>
+
+</body>
+</html>
