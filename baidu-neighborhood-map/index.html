@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Neighborhood Map</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="search-bar">
+			<input type="button" class="marker-list" data-bind="click:toggleList">
+			<input type="text" class="input-text" data-bind="textInput:filterValue">
+	        <input type="button" class="filter-button">
+		</div>
+		<ul data-bind="foreach:markerList, visible:markerList().length>0" id="list">
+			<li data-bind="text:title, visible:visible"></li>
+		</ul>
+		<div class="canvas-map" id="map"></div>
+
+	</body>
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=N1IZ9Xhv6zHik5Lqetz0OKGS3KXkCehv"></script>
+	<script type="text/javascript" src="js/knockout-3.2.0.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</html>

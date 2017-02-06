@@ -149,6 +149,10 @@ nav {
     margin-top: 2%;
 }
 
+.theme-img ol {
+    cursor: pointer;
+}
+
 
 .headerl p {
     width: 90%;
