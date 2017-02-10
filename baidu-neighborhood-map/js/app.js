@@ -1,30 +1,81 @@
 var initialMarkers=[
 {
 	"title":"东冠社区",
-	'lat':120.170921,
-	'lng':30.174058
+	'lng':120.170921,
+	'lat':30.174058
 },
 {
 	"title":"浙江工业大学屏峰校区",
-	"lat":120.044132,
-	"lng":30.231677
+	"lng":120.044132,
+	"lat":30.231677
 },
 {
 	"title":"杭州火车站",
-	"lat":120.188008,
-	"lng":30.249638
+	"lng":120.188008,
+	"lat":30.249638
 }
 ];
 
 var Marker=function(data){
-	var self=this;
-	self.title=data.title;
-	self.lat=data.lat;
-	self.lng=data.lng;
-	self.content='';
-	self.visible=ko.observable(true);
+	var self = this;
+	self.title = data.title;
+	self.lat = data.lat;
+	self.lng = data.lng;
+	self.content= '';
+	self.visible= ko.observable(true);
 
-	var =
+	var placePOI="http://api.map.baidu.com/place/v2/search"+"?"+$.param({
+		"q":"公交车站",
+		"location":self.lat+","+self.lng,
+		"radius":"2000",
+		"output":"json",
+		"ak":"N1IZ9Xhv6zHik5Lqetz0OKGS3KXkCehv"
+	});
+
+	$.ajax(placePOI,{
+		'dataType':"jsonp"
+	}).done(function(data){
+		console.log(data);
+		self.content = '<h2>'+self.title+'</h2>'
+						+'<p>'+data.results[0].address+'</p>'
+	}).fail(function(){
+		console.log("fail to connect the Web Server");
+	})
+
+	self.toggleBounce=function(markerItem){
+			markerItem.setAnimation(BMAP_ANIMATION_BOUNCE);
+			setTimeout(function(){
+				markerItem.setAnimation(null);
+			},1400);
+	}
+
+	self.marker = new BMap.Marker({
+			"lng":self.lng,
+			"lat":self.lat
+		},{
+			"title":self.title
+		}
+	);
+	map.addOverlay(self.marker);
+
+	self.clickTitle = function(){
+		infoWindow.setContent(self.content);
+		var point=new BMap.Point(self.lng,self.lat);
+		map.openInfoWindow(infoWindow,point);
+		self.toggleBounce(self.marker);
+	};
+
+	self.markerVisible=ko.computed(function(){
+		if(self.visible())
+		{
+			map.addOverlay(self.marker);  
+		}
+		else
+		{
+			map.removeOverlay(self.marker);
+		}
+	},self);
+
 }
 
 var ViewModel=function(){
@@ -33,7 +84,7 @@ var ViewModel=function(){
 
 
 	initialMarkers.forEach(function(markerItem){
-		self.markerList.push(markerItem);
+		self.markerList.push(new Marker(markerItem));
 	});
 
 	self.filterValue=ko.observable('');

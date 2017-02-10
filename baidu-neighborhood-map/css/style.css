@@ -1,6 +1,4 @@
-*{
-	border:inherit;
-}
+
 
 .canvas-map{
 	height:100vh;
@@ -9,7 +7,6 @@
 }
 
 .search-bar{
-	border:solid 1px red;
 	position:absolute;
 	z-index: 99;
 	display:flex;
