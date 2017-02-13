@@ -36,7 +36,7 @@ ul{
 	position: absolute;
 	z-index:99;
 	background-color: #ffffff;
-	margin-top:70px;
+	margin-top:68px;
 	margin-left:10px;
 	line-height:1.5em;
 	list-style:url('../imgs/list.png');
@@ -44,6 +44,8 @@ ul{
 	cursor:pointer;
 	line-height: 30px;
 	width:192px;
+	transform:translate(0,0);
+	transition:transform 0.3s ease;
 }
 
 .list-toggle{

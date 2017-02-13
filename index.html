@@ -11,51 +11,55 @@
 		<script  src="js/jquery-3.1.1.min.js"></script>
 		<script  src="js/bootstrap.min.js"></script>
 	</head>
-	<body class="container">
+	<body>
 <!-- 运用了html5的一些语义元素 -->
-		<header class="row header">
-			<div class="col-xs-12 col-md-2 headerl">
-				<img src="image/浙江工业大学校徽.png" alt="校徽">
-				<p>浙江工业大学</p>
-			</div>
-			<div class="col-xs-12 col-md-10 headerr">
-				<iframe width="200" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&py=binjianqu&num=1"></iframe>
-				<h1>前端作品集展示</h1>
-				<div>
-					<strong>薛琰</strong>
+		<header class="container header">
+			<div class="row">
+				<div class="col-xs-12 col-md-2 headerl">
+					<img src="image/浙江工业大学校徽.png" alt="校徽">
+					<p>浙江工业大学</p>
 				</div>
-				<nav>
-					<a href="#self-introduction">个人简介</a>
-					<a href="#certificates">MOOC证书展示</a>
-					<a href="#featured-work">特色作品</a>
-					<a href="https://github.com/xueyan123321">github账号地址</a>
-				</nav>
+				<div class="col-xs-12 col-md-10 headerr">
+					<iframe width="200" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&py=binjianqu&num=1"></iframe>
+					<h1>前端作品集展示</h1>
+					<div>
+					<strong>薛琰</strong>
+					</div>
+					<nav>
+						<a href="#self-introduction">个人简介</a>
+						<a href="#certificates">MOOC证书展示</a>
+						<a href="#featured-work">特色作品</a>
+						<a href="https://github.com/xueyan123321">github账号地址</a>
+					</nav>
+				</div>
 			</div>
 		</header>
 <!-- 自我简介 -->
-		<div class="demo row">
-			<div class="some-introduction col-xs-12 col-md-6">
-				<h2 id="self-introduction">个人简介</h2>
-  				<ul>
-  					<li>有良好的英文基础，曾经做过英文老师，六级成绩538，无障碍阅读各种英文文档和听懂各种技术视频。
-  					coursera和udacity均为优质的全英文在线教程。依靠优秀的英文基础，对于前端知识的更新有很强的适应性。</li>
+		<div class="demo container">
+			<div class="row">
+				<div class="some-introduction col-xs-12 col-md-6">
+					<h2 id="self-introduction">个人简介</h2>
+  					<ul>
+  						<li>有良好的英文基础，曾经做过英文老师，六级成绩538，无障碍阅读各种英文文档和听懂各种技术视频。
+  						coursera和udacity均为优质的全英文在线教程。依靠优秀的英文基础，对于前端知识的更新有很强的适应性。</li>
  
-  					<li>本身是浙江通信工程专业，硕士学位，有较强的IT背景。热爱IT技术。</li>
+  						<li>本身是浙江通信工程专业，硕士学位，有较强的IT背景。热爱IT技术。</li>
 
-  					<li>有自己的技术博客和作业项目，对于网站开发的基本知识有较好的掌握。</li>
-  				</ul>
-			</div>		
-			<div class="theme-img col-xs-12 col-md-6">
-				<ol>
-					<li>web</li>
-					<li>github账号</li>
-					<li>udacity课程情况</li>
-				</ol>
-				<img src="image/前端图标.jpg" alt="前端图标" class="img-responsive img-thumbnail">
+  						<li>有自己的技术博客和作业项目，对于网站开发的基本知识有较好的掌握。</li>
+  					</ul>
+				</div>		
+				<div class="theme-img col-xs-12 col-md-6">
+					<ol>
+						<li>web</li>
+						<li>github账号</li>
+						<li>udacity课程情况</li>
+					</ol>
+					<img src="image/前端图标.jpg" alt="前端图标" class="img-responsive img-thumbnail">
+				</div>
 			</div>
 		</div>
 <!-- coursera 证书展示 -->
-		<div class="certificates">
+		<div class="certificates container">
 			<h2>MOOC证书</h2>
 			<div class="certificates-img">
 				<figure>
@@ -68,7 +72,7 @@
 			</div>
 		</div>
 <!-- 特色作品展示 -->
-		<div class="featured-demo">
+		<div class="featured-demo container">
 			<h2 id='featured-work'>特色作品集</h2>
 			<div class="demo">
 				<ul class='demo-list row'>
