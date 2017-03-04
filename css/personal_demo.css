@@ -87,6 +87,9 @@ nav {
     font-size: 1.4em;
 }
 
+.carousel-indicators .active{
+    background-color: green; !important
+}
 /*certificates*/
 .certificates {
     margin-top:50px;
@@ -121,6 +124,7 @@ nav {
     margin-left:40px;
     width:40%;
     font-size: 1.5em;
+    padding-top:100px;
 }
 
 /*featured-demo*/
@@ -173,38 +177,9 @@ figure p {
     text-align: center;
 }
 
-
-
-.theme-img ol {
-    background-color:#808080;
-    position: absolute;
-    border-radius: 5px;
+.carousel-caption{
+    color:#ff0000;
 }
-
-.theme-img ol li:first-child {
-    border-left: #FF0000 solid 5px;
-    border-radius: 5px 0px 0px 5px;
-    margin-left: 0px;
-}
-
-.theme-img ol li:last-child {
-    border-radius: 0px 5px 5px 0px;
-}
-
-.theme-img ol li {
-    display: inline-block;
-    border-right: #FF0000 solid 5px;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-left: -4px;
-}
-
-
-.theme-img ol {
-    padding-left: 0px;
-}
-
-
 
 @media screen and (max-width:480px) {
     body {
