@@ -24,7 +24,7 @@ var Marker=function(data){
 	self.content= '';
 	self.visible= ko.observable(true);
 
-	var placePOI="http://api.map.baidu.com/place/v2/search"+"?"+$.param({
+	var placePOI="https://api.map.baidu.com/place/v2/search"+"?"+$.param({
 		"q":"公交车站",
 		"location":self.lat+","+self.lng,
 		"radius":"2000",
