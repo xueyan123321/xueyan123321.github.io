@@ -7,9 +7,6 @@ body {
 }
 
 /*header*/
-.header {
-    border-bottom: solid 10px #1BFF00;
-}
 
 iframe{
     position: absolute;
@@ -60,6 +57,11 @@ nav {
     background: url('../image/finger.png') no-repeat;
     background-position: 0 50%;
     padding-left: 30px;
+}
+
+hr{
+    border:5px solid #00ff00;
+    border-radius: 5px;
 }
 
 /*theme-img*/
